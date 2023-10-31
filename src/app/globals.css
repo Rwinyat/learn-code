@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mamad{
+    height: 87vh;
+    background-color: rgb(85, 83, 83);
+}
+h1{
+    font-size: 35px;
+    font-weight: 900;
+}
+h3{
+    font-size: 30px;
+    font-weight: 800;
+}

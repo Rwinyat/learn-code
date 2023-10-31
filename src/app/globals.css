@@ -10,7 +10,24 @@ h1{
     font-size: 35px;
     font-weight: 900;
 }
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .mainH{
+    text-align: center;
+  }
+}
+    
+
 h3{
     font-size: 30px;
     font-weight: 800;
+}
+.lesson{
+    border: solid 1px #0284c7;
+}
+.pricingH{
+    border: solid 1px #0284c7;
 }

@@ -3,6 +3,7 @@ import CssIcon from '../icon/css3.png'
 import javascriptIcon from '../icon/javascript.png'
 import nextjsIcon from '../icon/nextjs.png'
 import reactIcon from '../icon/react.png'
+import nodeIcon from '../icon/nodeIcon.png'
 
 import Image from 'next/image';
 
@@ -75,12 +76,17 @@ export default function Syllabus() {
         image: reactIcon,
         description: "The HyperText Markup Language or HTML is the standard markup language",
         completed: true
+    },{
+      title: 'Node.js',
+      image: nodeIcon,
+      description: "The HyperText Markup Language or HTML is the standard markup language",
+      completed:false
     }
   ];
 
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="text-2xl font-bold mb-4">lesson Card</h1>
+    <div className="container mx-auto px-4 ">
+      <h1 className=" m-5 text-center text-amber-500 lesson p-5">Lesson</h1>
       <LessonsList lessons={lessons} />
     </div>
   );

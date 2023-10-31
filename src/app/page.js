@@ -3,7 +3,7 @@ import './globals.css';
 import Hero from "./components/hero";
 import Syllabus from "./components/syllabus"
 import MyFooter from "./components/footer"
-
+import Pricing from './components/pricing'
 
 
 export const metadata = {
@@ -18,6 +18,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Syllabus />
+      <Pricing />
       <MyFooter />
     </div>
   )

@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CloseIcon from "../icon/icons8-close.svg";
 import BurgerIcon from "../icon/icons8-menu.svg";
-
 
 export default function Navbar() {
   const [menuIcon, setMenuIcon] = useState(false);
@@ -18,7 +17,9 @@ export default function Navbar() {
       <nav className="max-w-[1366px] mx-auto h-[80px] flex justify-around items-center p-4">
         <div>
           <Link href="/">
-            <span className="font-extrabold text-3xl md:2xl xl:3xl uppercase">Learn Code</span>
+            <span className="font-extrabold text-3xl md:2xl xl:3xl uppercase">
+              Learn Code
+            </span>
           </Link>
         </div>
         <ul className="hidden md:flex uppercase font-semibold">
@@ -34,7 +35,10 @@ export default function Navbar() {
         </ul>
         <div className="hidden md:flex">
           <div className="flex">
-            <button type="button" className="bg-blue-500 m-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button
+              type="button"
+              className="bg-blue-500 m-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
               Sign In
             </button>
             <button
@@ -46,10 +50,23 @@ export default function Navbar() {
           </div>
         </div>
         <div onClick={handleSmallScreen} className="flex md:hidden">
-          {menuIcon ? <Image src={CloseIcon} className=" w-6 h-6" /> : <Image src={BurgerIcon} className=" w-6 h-6" />}
-          
+          {menuIcon ? (<Image src={CloseIcon} alt="icon" className=" w-6 h-6" />) : (<Image src={BurgerIcon} alt="icon" className=" w-6 h-6" /> )}
         </div>
       </nav>
+      <div className={menuIcon ?"fixed top-0 left-0 w-[70%] h-full ease-in-out duration-500 lg:hidden bg-gray-900 border-r  border-r-gray-900": "fixed left-[-100%]"}>
+        <div className="mt-5">
+          <Link href="/">
+            <span className="font-extrabold text-3xl md:2xl xl:3xl p-5 uppercase">
+              Learn Code
+            </span>
+          </Link>
+        </div>
+        <ul className="pt-24">
+          <li className="p-4">Home</li>
+          <li className="p-4">Contact</li>
+          <li className="p-4">About</li>
+        </ul>
+      </div>
     </header>
   );
 }

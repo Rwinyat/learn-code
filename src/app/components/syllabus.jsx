@@ -32,8 +32,9 @@ const LessonCard = ({ title, image, description , completed }) => {
 const LessonsList = ({ lessons }) => {
   return (
     <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 md:items-center sm:items-center sm:w-full sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3">
-      {lessons.map((lesson, index) => (
-        <LessonCard key={index}
+      {lessons.map((lesson,index) => (
+        <LessonCard
+          key={index}
           title={lesson.title}
           description={lesson.description}
           image={lesson.image}
@@ -44,54 +45,55 @@ const LessonsList = ({ lessons }) => {
   );
 };
 
-export default function Syllabus() {
-  const lessons = [
-    {
-      title: 'Html',
-      image: HtmlIcon,
-      description:"The HyperText Markup Language or HTML is the standard markup language." ,
-      completed: true
-    },
-    {
-      title: 'Css',
-      image: CssIcon,
-      description:"Cascading Style Sheets is a style sheet language used for describing the presentation of a document." ,
-      completed: false
-    },
-    {
-      title: 'Javascript',
-      image: javascriptIcon,
-      description: "The HyperText Markup Language or HTML is the standard markup language.",
-      completed: true
-    },
-    {
-        title: 'Next.js',
-        image: nextjsIcon,
-        description:"The HyperText Markup Language or HTML is the standard markup language" ,
-        completed: true
-    }
-    ,
-    {
-        title: 'React.js',
-        image: reactIcon,
-        description: "The HyperText Markup Language or HTML is the standard markup language",
-        completed: true
-    },{
-      title: 'Node.js',
-      image: nodeIcon,
-      description: "The HyperText Markup Language or HTML is the standard markup language",
-      completed:false
-    }
-  ];
 
+export default function SyllabusNew() {
   return (
     <div className="container mx-auto px-4 ">
       <h1 className=" m-5 text-center text-amber-500 lesson p-5">Lesson</h1>
       <LessonsList lessons={lessons} />
     </div>
   );
+
 };
 
+const lessons = [
+  {
+    title: 'Html',
+    image: HtmlIcon,
+    description:"The HyperText Markup Language or HTML is the standard markup language." ,
+    completed: true
+  },
+  {
+    title: 'Css',
+    image: CssIcon,
+    description:"Cascading Style Sheets is a style sheet language used for describing the presentation of a document." ,
+    completed: false
+  },
+  {
+    title: 'Javascript',
+    image: javascriptIcon,
+    description: "The HyperText Markup Language or HTML is the standard markup language.",
+    completed: true
+  },
+  {
+      title: 'Next.js',
+      image: nextjsIcon,
+      description:"The HyperText Markup Language or HTML is the standard markup language" ,
+      completed: true
+  }
+  ,
+  {
+      title: 'React.js',
+      image: reactIcon,
+      description: "The HyperText Markup Language or HTML is the standard markup language",
+      completed: true
+  },{
+    title: 'Node.js',
+    image: nodeIcon,
+    description: "The HyperText Markup Language or HTML is the standard markup language",
+    completed:false
+  }
+];
 
 {/* <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

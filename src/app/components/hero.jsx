@@ -15,8 +15,6 @@ export default function SecHero(){
                     </button>
                 </div>
             </div>
-
-   
             <Image className="w-[500px] mx-auto my-4" src={HeroImg}/>
     
         </div>  

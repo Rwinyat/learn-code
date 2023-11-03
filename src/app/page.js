@@ -4,6 +4,8 @@ import Hero from "./components/hero";
 import Syllabus from "./components/syllabus"
 import MyFooter from "./components/footer"
 import Pricing from './components/pricing'
+import SyllabusNew from "./components/syllabus";
+import PricingNew from './components/pricingNew'
 
 
 export const metadata = {
@@ -19,6 +21,8 @@ export default function Home() {
       <Hero />
       <Syllabus />
       <Pricing />
+      <SyllabusNew/>
+      <PricingNew />
       <MyFooter />
     </div>
   )

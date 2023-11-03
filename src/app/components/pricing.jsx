@@ -6,7 +6,7 @@ export default function Pricing() {
 
     <div className="mt-12 p-5 items-center justify-center space-y-4 sm:mt-16 sm:space-y-0 md:items-center lg:items-center  sm:w-full sm:grid sm:grid-cols-3 sm:gap-6  lg:max-w-4xl  xl:max-w-none  xl:grid-cols-3">
 
-      <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
           Free plan
         </h5>

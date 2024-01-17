@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import CloseIcon from "../icon/icons8-close.svg";
-import BurgerIcon from "../icon/icons8-menu.svg";
+import CloseIcon from "../../icon/icons8-close.svg";
+import BurgerIcon from "../../icon/icons8-menu.svg";
 
 export default function Navbar() {
   const [menuIcon, setMenuIcon] = useState(false);

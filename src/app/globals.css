@@ -6,20 +6,20 @@
     height: 87vh;
     background-color: rgb(85, 83, 83);
 }
-h1{
-    font-size: 35px;
-    font-weight: 900;
+p{
+  font-family: "Popinse";
+  font-size: 16;
+  
 }
-h2{
-    font-size: 30px;
-    font-weight: 800;
-}
+
 h3{
+  font-family: "Popinse";
     font-size: 25px;
     font-weight: 700;
 }
 
 h4{
+  
     font-size: 23px;
     font-weight: 600;
 }
@@ -27,18 +27,22 @@ h4{
 
 @media only screen and (max-width: 600px) {
   h1{
+    font-family: "Popinse";
     font-size: 25px;
     font-weight: 800;
   }
   h2{
+    font-family: "Popinse";
     font-size: 23px;
     font-weight: 700;
   }
   h3{
+    font-family: "Popinse";
     font-size: 21px;
     font-weight: 600;
   }
   h4{
+    font-family: "Popinse";
     font-size: 20px;
     font-weight: 500;
   }
@@ -67,24 +71,50 @@ h4{
 
 
 .statement {
-  background-color: rgba(255 255 0 / .5);
+  
+  background-color: rgba(179, 179, 169, 0.5);
   border-radius: 5px;
-  border: 1px solid silver;
-  margin: 15px;
+
+
   padding: 5px;
+ 
 }
+
 .expr {
   display: inline-block;
-  border: 1px solid gray;
+  border: 1px solid transparent;
   border-radius: 3px;
   padding: 5px;
 }
+
+.expr:hover {
+  
+  border: 1px solid gray;
+  
+
+  /* animation: borderAnimation 1s ease-in-out infinite; */
+}
+
+
+
+
+.secendExpr {
+  display: none;
+  
+}
+.statement:hover+ .secendExpr{
+  display: block;
+ 
+ }
+ 
+
 .assignment {
   color: purple;
   background-color: rgba(255 0 255 / 0.3);
   border-radius: 3px;
   padding: 2px 5px;
   font-weight: bold;
+  
 }
 .variable {
   color: blue;
@@ -96,12 +126,97 @@ h4{
 .new-obj {
   color: green;
 }
-.new-obj.arrow-function {
-   
-}
+
 .function-arg {
   color: gray;
 }
 .literal {
   color: red;
+}
+
+
+.fade-in {
+  
+  transition: opacity 0.5s ease-in-out;
+}
+.tooltip-controler {
+  position: relative;  
+  justify-content: center;
+}
+
+.tooltip {
+  border: #333 solid 1px;
+  position: absolute;
+  top:2.5rem;
+  width: 10rem;
+  height: 2rem;
+  background-color: #4b3a97; 
+  border-radius: 10px; 
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-family: Arial, sans-serif; 
+  color: #d6d1d1; 
+  text-align: center;
+
+}
+.exampleEval{
+  border:  #333 solid 1px;
+  position: absolute;
+  top:3.3rem;
+  width: 10rem;
+  height: 2rem;
+  background-color: #4b3a97; 
+  border-radius: 10px; 
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-family: Arial, sans-serif; 
+  color: #d6d1d1; 
+  text-align: center;
+  animation: borderAnime 4s infinite;
+  
+}
+
+@keyframes borderAnime {
+0% {
+    opacity: 0;
+  }
+  25% {
+    opacity:0;
+  }
+  50%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(45px) translateY(13px);
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0 ;
+  }
+}
+
+.newArrow {
+  animation: moveArrow 4s infinite;
+}
+
+.conditionExpression{
+  background-color: rgba(179, 179, 169, 0.5);
+  border-radius: 5px;
+  padding: 15px;
 }

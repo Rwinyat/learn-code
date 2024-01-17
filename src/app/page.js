@@ -1,11 +1,11 @@
-import Navbar from "./components/navbar"
+import Navbar from "./components/Home/navbar"
 import './globals.css';
-import Hero from "./components/hero";
-import Syllabus from "./components/syllabus"
-import MyFooter from "./components/footer"
-import Pricing from './components/pricing'
-import SyllabusNew from "./components/syllabus";
-import PricingNew from './components/pricingNew'
+import Hero from "./components/Home/hero";
+import Syllabus from "./components/Home/syllabus"
+import MyFooter from "./components/Home/footer"
+import Pricing from './components/Home/pricing'
+import SyllabusNew from "./components/Home/syllabus";
+import PricingNew from './components/Home/pricingNew'
 
 
 export const metadata = {

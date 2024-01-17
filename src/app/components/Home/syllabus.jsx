@@ -1,9 +1,9 @@
-import HtmlIcon from '../icon/html5.png'
-import CssIcon from '../icon/css3.png'
-import javascriptIcon from '../icon/javascript.png'
-import nextjsIcon from '../icon/nextjs.png'
-import reactIcon from '../icon/react.png'
-import nodeIcon from '../icon/nodeIcon.png'
+import HtmlIcon from '../../icon/html5.png'
+import CssIcon from '../../icon/css3.png'
+import javascriptIcon from '../../icon/javascript.png'
+import nextjsIcon from '../../icon/nextjs.png'
+import reactIcon from '../../icon/react.png'
+import nodeIcon from '../../icon/nodeIcon.png'
 
 import Image from 'next/image';
 

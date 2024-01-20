@@ -36,6 +36,9 @@ export default function LessonExperession() {
           a border<span className=" text-red-600 "> "</span>
         </h2>
       </div>
+
+      {/* concatenation */}
+
       <div className="flex flex-row relative">
         <div className="statement w-48 justify-center m-5  items-center flex relative">
           <Image
@@ -91,6 +94,8 @@ export default function LessonExperession() {
           </div>
         </div>
       </div>
+
+      {/* type conversion: */}
 
       <div className="flex flex-row ">
         <div className="statement w-48 text-center m-5 relative ">
@@ -352,10 +357,10 @@ export default function LessonExperession() {
         </div>
       </div>
 
-
+      {/* logical */}
 
       <div className="flex flex-col md:flex-row">
-      <div className="statement w-48 text-center m-5 relative ">
+        <div className="statement w-48 text-center m-5 relative ">
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
             <Tooltip
               className="p-5 left-36 absolute"
@@ -365,7 +370,7 @@ export default function LessonExperession() {
             </Tooltip>
           </div>
         </div>
-       
+
         <div className="statement w-48 text-center m-5 relative ">
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
             <Tooltip
@@ -378,9 +383,7 @@ export default function LessonExperession() {
                 </span>
               </Tooltip>
               <span>==</span>
-              <Tooltip
-              text={"evaluates to 5"}
-              >
+              <Tooltip text={"evaluates to 5"}>
                 <span className="text-red-600 hover:outline outline-1 rounded-md outline-gray-500 ">
                   5
                 </span>
@@ -461,8 +464,6 @@ export default function LessonExperession() {
           </div>
         </div>
 
-
-
         <div className="statement w-48 text-center m-5 relative ">
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
             <Tooltip
@@ -491,7 +492,6 @@ export default function LessonExperession() {
           </div>
         </div>
       </div>
-
 
       <div className="flex flex-col md:flex-row">
         <div className="statement w-48 text-center m-5 relative ">
@@ -549,7 +549,6 @@ export default function LessonExperession() {
           </div>
         </div>
 
-
         <div className="statement w-48 text-center m-5 relative ">
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
             <Tooltip
@@ -584,80 +583,286 @@ export default function LessonExperession() {
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
             <Tooltip
               className="p-5 left-36 absolute"
-              text={"evaluates to " + "ture"}
+              text={"evaluates to " + "8"}
             >
               <Tooltip
                 className="p-5 left-32 absolute"
-                text={"evaluates to " + "6"}
-              >
-                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
-                  6
-                </span>
-                <span>{"=="}</span>
-              </Tooltip>
-
-              <Tooltip
-                className="p-5 left-32 absolute"
-                text={"evaluates to " + "6"}
-              >
-                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
-                  6
-                </span>
-              </Tooltip>
-            </Tooltip>
-          </div>
-        </div>
-        <div className="statement w-48 text-center m-5 relative ">
-          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
-            <Tooltip
-              className="p-5 left-36 absolute"
-              text={"evaluates to " + "true"}
-            >
-              <Tooltip
-                className="p-5 left-32 absolute "
-                text={"evaluates to " + "6"}
-              >
-                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
-                  6
-                </span>
-                <span>{"=="}</span>
-              </Tooltip>
-
-              <Tooltip
-                className="p-5 left-32 absolute"
-                text={"evaluates to " + "'6'"}
-              >
-                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
-                  "6"
-                </span>
-              </Tooltip>
-            </Tooltip>
-          </div>
-        </div>
-
-
-        <div className="statement w-48 text-center m-5 relative ">
-          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
-            <Tooltip
-              className="p-5 left-36 absolute"
-              text={"evaluates to " + "false"}
-            >
-              <Tooltip
-                className="p-5 left-32 absolute "
                 text={"evaluates to " + "5"}
               >
                 <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
                   5
                 </span>
-                <span>{"==="}</span>
+                <span>{"&&"}</span>
               </Tooltip>
 
               <Tooltip
                 className="p-5 left-32 absolute"
-                text={"evaluates to " + "'5'"}
+                text={"evaluates to " + "8"}
               >
                 <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
-                  "5"
+                  8
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluates to " + eval(false && 6)}
+            >
+              <Tooltip
+                className="p-5 left-32 absolute "
+                text={"evaluates to " + "false"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  false
+                </span>
+                <span>{"&&"}</span>
+              </Tooltip>
+
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "6"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  6
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluates to " + "0"}
+            >
+              <Tooltip
+                className="p-5 left-32 absolute "
+                text={"evaluates to " + "0"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  0
+                </span>
+                <span>{"&&"}</span>
+              </Tooltip>
+
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "8"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  8
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row">
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluates to " + "NaN"}
+            >
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "NaN"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  NaN
+                </span>
+                <span>{"&&"}</span>
+              </Tooltip>
+
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "8"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  8
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluates to " + "6"}
+            >
+              <Tooltip
+                className="p-5 left-32 absolute "
+                text={"evaluates to " + "0"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  0
+                </span>
+                <span>{"||"}</span>
+              </Tooltip>
+
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "6"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  6
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluates to " + "8"}
+            >
+              <Tooltip
+                className="p-5 left-32 absolute "
+                text={"evaluates to " + "8"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  8
+                </span>
+                <span>{"||"}</span>
+              </Tooltip>
+
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "4"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  4
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+
+      {/* inja */}
+
+      <div className="flex flex-col md:flex-row">
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluates to " + "8"}
+            >
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "ture"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  ture
+                </span>
+                <span>{"?"}</span>
+              </Tooltip>
+
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "1"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  1
+                </span>
+              </Tooltip>
+              <span>:</span>
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "9"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  9
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluates to " + eval(false && 6)}
+            >
+              <Tooltip
+                className="p-5 left-32 absolute "
+                text={"evaluates to " + "false"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  false
+                </span>
+                <span>{"?"}</span>
+              </Tooltip>
+
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "1"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  1
+                </span>
+              </Tooltip>
+              <span>:</span>
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "5"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  5
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluates to " + "0"}
+            >
+              <Tooltip
+                className="p-5 left-32 absolute "
+                text={"evaluates to " + "0"}
+              >
+                <div className="hover:outline outline-1 rounded-md outline-gray-500">
+                  <Tooltip text={"evaluates to " + eval(5 > 4)}>
+                    <span>{"("}</span>
+                    <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                      5
+                    </span>
+                    <span>{">"}</span>
+                    <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                      4
+                    </span>
+                    <span>{")"}</span>
+                  </Tooltip>
+                </div>
+                <span>{"?"}</span>
+              </Tooltip>
+
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "8"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  8
+                </span>
+              </Tooltip>
+
+              <span>{":"}</span>
+              <Tooltip
+                className="p-5 left-32 absolute"
+                text={"evaluates to " + "8"}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  4
                 </span>
               </Tooltip>
             </Tooltip>

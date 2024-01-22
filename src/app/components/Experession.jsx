@@ -746,7 +746,7 @@ export default function LessonExperession() {
         </div>
       </div>
 
-      {/* inja */}
+      {/* ternary */}
 
       <div className="flex flex-col md:flex-row">
         <div className="statement w-48 text-center m-5 relative ">
@@ -871,6 +871,341 @@ export default function LessonExperession() {
       </div>
 
       <div className="flex flex-col md:flex-row">
+        <div className="statement w-7/12 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                4
+              </span>
+              <span>{">"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                5
+              </span>
+              <span>{"?"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                6
+              </span>
+              <span>==</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                1
+              </span>
+              <span>{"?"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                1
+              </span>
+              <span>:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                2
+              </span>
+              <span>:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                3
+              </span>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-7/12  text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                4
+              </span>
+              <span>{">"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                5
+              </span>
+              <span>{"?"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                0
+              </span>
+              <span>:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                6
+              </span>
+              <span>==</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                6
+              </span>
+
+              <span>{"?"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                2
+              </span>
+              <span>:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                3
+              </span>
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+
+      {/* typeof */}
+
+      <div className="flex flex-col md:flex-row">
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip text={"Type : string"}>
+              <span>Typeof:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                "Hello"
+              </span>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip text={"Type: number"}>
+              <span>Typeof:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                -45
+              </span>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip text={"Type: string"}>
+              <span>Typeof:</span>
+              <Tooltip text={"Type: number"}>
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  5
+                </span>
+              </Tooltip>
+              <span>+</span>
+              <Tooltip text={"Type : string"}>
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  "x"
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div className="flex flex-col md:flex-row">
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip text={"Type: number"}>
+              <span>Typeof:</span>
+              <Tooltip text={"Type: number"}>
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  +"x"
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip text={"Type: number"}>
+              <span>Typeof:</span>
+              <Tooltip text={"Type: number"}>
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  -"x"
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip text={"Type: undefined"}>
+              <span>Typeof:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                true
+              </span>
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+
+      {/* parentheses */}
+      <div className="flex flex-col md:flex-row">
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2 ">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluated to " + eval(5 - 2 + 3)}
+            >
+              <div className="hover:outline outline-1 rounded-md outline-gray-500 ">
+                <Tooltip text={"evaluated to " + eval(3)}>
+                  <span>(</span>
+                  <Tooltip
+                    className="p-5 left-32 absolute "
+                    text={"evaluated to " + eval(5)}
+                  >
+                    <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                      5
+                    </span>
+                  </Tooltip>
+                  -
+                  <Tooltip
+                    className="p-5 left-32 absolute"
+                    text={"evaluated to " + eval(2)}
+                  >
+                    <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                      2
+                    </span>
+                  </Tooltip>
+                  <span>)</span>
+                </Tooltip>
+              </div>
+              +
+              <Tooltip
+                className="p-5 left-25 absolute"
+                text={"evaluated to " + eval(3)}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  3
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2 ">
+            <Tooltip
+              className="p-5 left-36 absolute"
+              text={"evaluated to " + eval((7*2) - 3)}
+            >
+              <div className="hover:outline outline-1 rounded-md outline-gray-500 ">
+                <Tooltip text={"evaluated to " + eval(14)}>
+                  <span>(</span>
+                  <Tooltip
+                    className="p-5 left-32 absolute "
+                    text={"evaluated to " + eval(7)}
+                  >
+                    <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                      7
+                    </span>
+                  </Tooltip>
+                  *
+                  <Tooltip
+                    className="p-5 left-32 absolute"
+                    text={"evaluated to " + eval(2)}
+                  >
+                    <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                      2
+                    </span>
+                  </Tooltip>
+                  <span>)</span>
+                </Tooltip>
+              </div>
+              -
+              <Tooltip
+                className="p-5 left-25 absolute"
+                text={"evaluated to " + eval(3)}
+              >
+                <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  3
+                </span>
+              </Tooltip>
+            </Tooltip>
+          </div>
+        </div>
+        {/* +("-45.5" + 1) */}
+        <div className="statement w-48 text-center m-5 relative ">
+          <Tooltip>
+            <span className="py-2">+</span>
+            <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2 text-red-600">
+              <span className="text-black">{"("}</span>
+              <span className="hover:outline outline-1 rounded-md outline-gray-500 p-2 text-red-600">
+                "-45.5"
+              </span>
+              <span className="text-black">+</span>
+              <span className="hover:outline outline-1 rounded-md p-2 outline-gray-500 text-red-600">
+                1
+              </span>
+              <span className="text-black">{")"}</span>
+            </div>
+          </Tooltip>
+        </div>
+      </div>
+      {/* inja */}
+      {/* 4 > 5 ? 1 : 6 == 1 ? 1 : 2     ( 4 < 5 ? 0 : 6 == 6) ? 2 : 3 */}
+
+      <div className="flex flex-col md:flex-row">
+        <div className="statement w-7/12 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip>
+              <span>{'('}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                4
+              </span>
+              <span>{">"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                5
+              </span>
+              <span>{')'}</span>
+              <span>{"?"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                1
+              </span>
+              <span>:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                6
+              </span>
+              <span>==</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                1
+              </span>
+              <span>?</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                1
+              </span>
+              <span>:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                3
+              </span>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-7/12  text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip>
+              <span>{'('}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                4
+              </span>
+              <span>{"<"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                5
+              </span>
+              <span>{"?"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                0
+              </span>
+              <span>:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                6
+              </span>
+              <span>==</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                6
+              </span>
+            <span>{')'}</span>
+              <span>{"?"}</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                2
+              </span>
+              <span>:</span>
+              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                3
+              </span>
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+      {/* object and array */}
+
+      <div className="flex flex-col md:flex-row">
         <div className="statement w-48 text-center m-5 relative ">
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
             <Tooltip className="p-5 left-36 absolute" text={"Empty Object"}>
@@ -983,47 +1318,6 @@ export default function LessonExperession() {
             </span>
           </p>
         </Tooltip>
-      </div>
-      <div className="statement w-48 text-center m-5 relative ">
-        <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2 ">
-          <Tooltip
-            className="p-5 left-36 absolute"
-            text={"evaluated to " + eval(5 - 2 + 3)}
-          >
-            <div className="hover:outline outline-1 rounded-md outline-gray-500 ">
-              <Tooltip text={"evaluated to " + eval(3)}>
-                <span>(</span>
-                <Tooltip
-                  className="p-5 left-32 absolute "
-                  text={"evaluated to " + eval(5)}
-                >
-                  <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
-                    5
-                  </span>
-                </Tooltip>
-                -
-                <Tooltip
-                  className="p-5 left-32 absolute"
-                  text={"evaluated to " + eval(2)}
-                >
-                  <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
-                    2
-                  </span>
-                </Tooltip>
-                <span>)</span>
-              </Tooltip>
-            </div>
-            +
-            <Tooltip
-              className="p-5 left-25 absolute"
-              text={"evaluated to " + eval(3)}
-            >
-              <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
-                3
-              </span>
-            </Tooltip>
-          </Tooltip>
-        </div>
       </div>
     </div>
   );

@@ -983,8 +983,6 @@ export default function LessonExperession() {
         </div>
       </div>
 
-
-
       <div className="flex flex-col md:flex-row">
         <div className="statement w-48 text-center m-5 relative ">
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
@@ -1069,7 +1067,7 @@ export default function LessonExperession() {
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2 ">
             <Tooltip
               className="p-5 left-36 absolute"
-              text={"evaluated to " + eval((7*2) - 3)}
+              text={"evaluated to " + eval(7 * 2 - 3)}
             >
               <div className="hover:outline outline-1 rounded-md outline-gray-500 ">
                 <Tooltip text={"evaluated to " + eval(14)}>
@@ -1131,7 +1129,7 @@ export default function LessonExperession() {
         <div className="statement w-7/12 text-center m-5 relative ">
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
             <Tooltip>
-              <span>{'('}</span>
+              <span>{"("}</span>
               <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
                 4
               </span>
@@ -1139,7 +1137,7 @@ export default function LessonExperession() {
               <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
                 5
               </span>
-              <span>{')'}</span>
+              <span>{")"}</span>
               <span>{"?"}</span>
               <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
                 1
@@ -1166,7 +1164,7 @@ export default function LessonExperession() {
         <div className="statement w-7/12  text-center m-5 relative ">
           <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
             <Tooltip>
-              <span>{'('}</span>
+              <span>{"("}</span>
               <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
                 4
               </span>
@@ -1186,7 +1184,7 @@ export default function LessonExperession() {
               <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
                 6
               </span>
-            <span>{')'}</span>
+              <span>{")"}</span>
               <span>{"?"}</span>
               <span className="px-2 hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
                 2
@@ -1199,9 +1197,6 @@ export default function LessonExperession() {
           </div>
         </div>
       </div>
-      
-
-
 
       {/* object and array */}
 
@@ -1258,6 +1253,98 @@ export default function LessonExperession() {
           </div>
         </div>
       </div>
+      {/* assignment */}
+      {/* a = 1   b = []  myArr = [1, 2, "x"]  */}
+      <div className="flex flex-col md:flex-row">
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500  p-2">
+            <Tooltip className="left-36 absolute" text={"Empty Array"}>
+              <span className="text-green-800">a&nbsp;</span>
+              <span>=</span>
+              <span className="text-red-600">1</span>
+            </Tooltip>
+          </div>
+        </div>
+
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip className="p-5 left-36 absolute" text={"Empty Array"}>
+              <span className="text-green-800">b&nbsp;</span>
+              <span>=</span>
+              <span className="text-red-600">{"[ ]"}</span>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="statement w-48 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip className="p-5 left-36 absolute" text={"Array"}>
+              <span className="text-green-800">b</span>
+              <span>=</span>
+              <span className="text-red-600 ">{"["}</span>{" "}
+              <Tooltip className="p-5 left-36 absolute" text={"evaluated to 4"}>
+                <span className="hover:outline outline-1 rounded-md outline-gray-500 ">
+                  4,
+                </span>
+                &nbsp;
+              </Tooltip>
+              <Tooltip className="p-5 left-36 absolute" text={"evaluated to 5"}>
+                <span className="hover:outline outline-1 rounded-md outline-gray-500">
+                  5,
+                </span>
+                &nbsp;
+              </Tooltip>
+              <Tooltip className="p-5 left-36 absolute" text={"evaluated to X"}>
+                <span className="hover:outline outline-1 rounded-md outline-gray-500">
+                  X
+                </span>
+              </Tooltip>
+              <span className="text-red-600">{"]"}</span>{" "}
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+
+      {/* myObj = { x: 1, y: 2, "complex name": 5 } */}
+      
+      
+      <div className="flex flex-col md:flex-row">
+        <div className="statement w-7/12 text-center m-5 relative ">
+          <div className="hover:outline outline-1 rounded-md outline-gray-500 p-2">
+            <Tooltip className="p-5 left-36 absolute" text={"Array"}>
+              <span className="text-green-800">myObj</span>
+              <span>=</span>
+              <span className="text-red-600 ">{"{"}</span>{" "}
+              <Tooltip className="p-5 left-36 absolute" text={"evaluated to 4"}>
+                <span className="text-blue-800">x:&nbsp;</span>
+                <span className="hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  4
+                </span>
+                &nbsp;,
+              </Tooltip>
+              <Tooltip className="p-5 left-36 absolute" text={"evaluated to 4"}>
+                <span className="text-blue-800">y:&nbsp;</span>
+                <span className="hover:outline outline-1 rounded-md outline-gray-500 text-red-600">
+                  5
+                </span>
+                &nbsp;,
+              </Tooltip>
+              <Tooltip className="p-5 left-36 absolute" text={"evaluated to X"}>
+                "
+                <span className="hover:outline outline-1 rounded-md outline-gray-500 text-blue-800">
+                complex name
+                </span>
+                "
+                <span>:&nbsp;</span>
+                <span className="hover:outline outline-1 rounded-md outline-gray-500 text-red-600">4</span>
+              
+              </Tooltip>
+
+              <span className="text-red-600">{"}"}</span>{" "}
+            </Tooltip>
+          </div>
+        </div>
+      </div>
+
       <div className="mt-4">
         <div className="flex w-90 text-center items-center m-5  conditionExpression   ">
           <Tooltip>

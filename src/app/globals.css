@@ -220,3 +220,39 @@ h4{
   border-radius: 5px;
   padding: 15px;
 }
+
+
+
+.boxLesson{
+  box-shadow: 10px 10px #888888;
+}
+.arrow-button {
+  background-color: transparent;
+  
+  padding: 0;
+  cursor: pointer;
+  
+}
+
+.arrow-iconRigt {
+ 
+
+  border-style: solid;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 26px solid #555555;
+  border-right: 0;
+ 
+}
+
+.arrow-iconLeft  {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 20px solid #555555;
+  border-left: 0;
+}
+
+

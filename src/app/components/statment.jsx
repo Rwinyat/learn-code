@@ -1,6 +1,6 @@
 import '../globals.css';
    
-        
+import { Stepper } from './stepper';
         
  export default function Statments(){       
       return(  
@@ -41,6 +41,8 @@ import '../globals.css';
                <p>b = 6;        // Assign the value 6 to b</p>
                <p>c = a + b;    // Assign the sum of a and b to c</p>
             </div>
+            <Stepper></Stepper>
+            
           </div>
 )
         }

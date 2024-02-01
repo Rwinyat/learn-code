@@ -75,13 +75,43 @@ export default function Content() {
         { title: "Read Scopes", component: step1 },
         { title: "Write scopes", component: stpe2 },
         { title: "Global (Window property) vs Scoped", component: step3 },
-        { title:"var, let, const and global examples" , component:step4}
+        { title: "var, let, const and global examples", component: step4 },
       ],
     },
-    { title: "" },
-    { title: "" },
-    { title: "" },
-    { title: "" },
+    {
+      title: "functions",
+      desc: "Functions in JavaScript can be used to organize code and make it more reusable.",
+      steps: [
+        { title: "Passing Functions as data", component: step1 },
+        { title: "Dynamic arguments:  arguments vs ...rest", component: step2 },
+        { title: "Arrow vs anonymous vs named", component: step3 },
+        { title: "Closure scope", component: step4 },
+      ],
+    },
+    {
+      title: "OOP",
+      desc: "Object-oriented programming (OOP) in JavaScript allows you to create objects with properties and methods, which can be used to represent real-world entities.",
+      steps: [
+        { title: "Constructor Functions", component: step1 },
+        { title: "this", component: step2 },
+        { title: "Class Syntax", component: step3 },
+        { title: "Instanceof (e.g. Array)", component: step4 },
+        { title: "Prototype", component: step5 },
+      ],
+    },
+    {
+      title: "Objects",
+      desc: "",
+      steps: [
+        {
+          title: "data types vs Number, Boolean, String, Array, etc...",
+          component: step1,
+        },
+        { title: "to string", component: step2 },
+        { title: "setter getters", component: step3 },
+      ],
+    },
+    { title: "clean code", desc:"", steps:[{},{}]},
   ];
   return content;
 }

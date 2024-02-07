@@ -1,86 +1,114 @@
-import React from "react";
-import { Stepper, Step, Button, Typography } from "@material-tailwind/react";
-import {
-  CogIcon,
-  UserIcon,
-  BuildingLibraryIcon,
-} from "@heroicons/react/24/outline";
- 
-export function StepperWithContent() {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [isLastStep, setIsLastStep] = React.useState(false);
-  const [isFirstStep, setIsFirstStep] = React.useState(false);
- 
-  const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
-  const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
- 
-  return (
-    <div className="w-full px-24 py-4">
-      <Stepper
-        activeStep={activeStep}
-        isLastStep={(value) => setIsLastStep(value)}
-        isFirstStep={(value) => setIsFirstStep(value)}
-      >
-        <Step onClick={() => setActiveStep(0)}>
-          <UserIcon className="h-5 w-5" />
-          <div className="absolute -bottom-[4.5rem] w-max text-center">
-            <Typography
-              variant="h6"
-              color={activeStep === 0 ? "blue-gray" : "gray"}
-            >
-              Step 1
-            </Typography>
-            <Typography
-              color={activeStep === 0 ? "blue-gray" : "gray"}
-              className="font-normal"
-            >
-              Details about yout account.
-            </Typography>
-          </div>
-        </Step>
-        <Step onClick={() => setActiveStep(1)}>
-          <CogIcon className="h-5 w-5" />
-          <div className="absolute -bottom-[4.5rem] w-max text-center">
-            <Typography
-              variant="h6"
-              color={activeStep === 1 ? "blue-gray" : "gray"}
-            >
-              Step 2
-            </Typography>
-            <Typography
-              color={activeStep === 1 ? "blue-gray" : "gray"}
-              className="font-normal"
-            >
-              Details about yout account.
-            </Typography>
-          </div>
-        </Step>
-        <Step onClick={() => setActiveStep(2)}>
-          <BuildingLibraryIcon className="h-5 w-5" />
-          <div className="absolute -bottom-[4.5rem] w-max text-center">
-            <Typography
-              variant="h6"
-              color={activeStep === 2 ? "blue-gray" : "gray"}
-            >
-              Step 3
-            </Typography>
-            <Typography
-              color={activeStep === 2 ? "blue-gray" : "gray"}
-              className="font-normal"
-            >
-              Details about yout account.
-            </Typography>
-          </div>
-        </Step>
-      </Stepper>
-      <div className="mt-32 flex justify-between">
-        <Button onClick={handlePrev} disabled={isFirstStep}>
-          Prev
-        </Button>
-        <Button onClick={handleNext} disabled={isLastStep}>
-          Next
-        </Button>
+
+
+export default function StepperN() {
+  return(
+  <div className="flex flex-col">
+    {/* Step 1 - Completed */}
+    <div className="flex items-center mb-4">
+      <div className="flex flex-col items-center">
+        <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+          <svg
+            className="w-4 h-4 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </div>
+        {/* Conditionally render the line if it's not the last item */}
+        <div className="w-0.5 h-8 bg-gray-300"></div>
+      </div>
+      <div className="ml-4 text-sm font-medium text-gray-700">
+        Create account
+        <br />
+        <span className="text-xs font-normal text-gray-500">
+          Vitae sed mi luctus laoreet.
+        </span>
       </div>
     </div>
+
+    {/* Step 2 - Completed */}
+    <div className="flex items-center mb-4">
+      <div className="flex flex-col items-center">
+        <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+          <svg
+            className="w-4 h-4 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </div>
+        <div className="w-0.5 h-8 bg-gray-300"></div>
+      </div>
+      <div className="ml-4 text-sm font-medium text-gray-700">
+        Profile information
+        <br />
+        <span className="text-xs font-normal text-gray-500">
+          Cursus semper viverra facilisis et et some more.
+        </span>
+      </div>
+    </div>
+
+    {/* Step 3 - Current */}
+    <div className="flex items-center mb-4">
+      <div className="flex flex-col items-center">
+        <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+          {/* Current step indicator - can be an arrow or different icon */}
+          <div className="w-2.5 h-2.5 bg-white rounded-full"></div>
+        </div>
+        <div className="w-0.5 h-8 bg-gray-300"></div>
+      </div>
+      <div className="ml-4 text-sm font-medium text-blue-600">
+        Business information
+        <br />
+        <span className="text-xs font-normal text-gray-500">
+          Penatibus eu quis ante.
+        </span>
+      </div>
+    </div>
+
+    {/* Step 4 - Pending */}
+    <div className="flex items-center mb-4">
+      <div className="flex flex-col items-center">
+        <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+          {/* Pending step indicator */}
+        </div>
+        <div className="w-0.5 h-8 bg-gray-300"></div>
+      </div>
+      <div className="ml-4 text-sm font-medium text-gray-500">
+        Theme
+        <br />
+        <span className="text-xs font-normal">Faucibus nec enim leo et.</span>
+      </div>
+    </div>
+
+    {/* Step 5 - Pending */}
+    <div className="flex items-center">
+      <div className="flex flex-col items-center">
+        <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+          {/* Pending step indicator */}
+        </div>
+        {/* No line after the last item */}
+      </div>
+      <div className="ml-4 text-sm font-medium text-gray-500">
+        Preview
+        <br />
+        <span className="text-xs font-normal">
+          Iusto et officia maiores porro ad non quas.
+        </span>
+      </div>
+    </div>
+  </div>
   );
 }

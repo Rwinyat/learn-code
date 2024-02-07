@@ -6,6 +6,7 @@ import Statments from "../components/statment";
 import Experession from "../components/Experession";
 import Variables from "../components/varieble";
 import CardLesson from "../components/card";
+import StepperN from "../components/newStepper"
 
 export default function LessonOne() {
   const [lessonIndex, setLessonIndex] = useState(0);
@@ -35,6 +36,7 @@ export default function LessonOne() {
       </div>
       <div className="rightDiv W-full md:translate-x-[90%] md:w-1/2 lg:mt-20 rounded-2xl mx-6 p-6  items-center mb-5 bg-slate-500">
         <ActiveLessonComponent />
+        <StepperN/>
       </div>
     </div>
   );

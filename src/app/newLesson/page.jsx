@@ -51,11 +51,7 @@ export default function NewLesson() {
 
           <div className="lessonCounter  h-4 bg-slate-400 border-2 rounded-2xl border-gray-500 flex">
             {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`bg-sky-600 w-[150px] ${
-                  index <= currentStep ? "bg-yellow-500 rounded-2xl" : ""
-                }`}
+              <div  key={index} className={`bg-sky-600 w-[150px] ${ index <= currentStep ? "bg-yellow-500 rounded-2xl" : ""}`}
                 style={{
                   transition: "background-color 0.3s ease-in-out",
                 }}

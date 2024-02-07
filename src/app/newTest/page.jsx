@@ -110,3 +110,54 @@
 //           </div>
 // )
 //         }
+
+
+import "../globals.css";
+import lessens from "../Lessons/content"
+
+export default function Stepper() {
+  // localStorage.getItem(currentItem)
+  let currentItem=true;
+    return (
+      <div className="flex flex-col">
+        {lessens.map((item, index) => (
+          <div className="flex items-center mb-4" key={index}>
+            <div className="flex flex-col items-center">
+              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+             
+                {currentItem ? (
+                  <a href="">
+                  <svg
+                    className="w-4 h-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg></a>
+                ) : (
+                  <div className="w-2.5 h-2.5 bg-white rounded-full" />
+                )}
+              </div>
+            
+              {index < lessens.length - 1 && (
+                <div className="w-0.5 h-8 bg-gray-300" />
+              )}
+            </div>
+            <div className="ml-4 text-sm font-medium text-gray-700">
+              {item.title}
+              <br />
+              <span className="text-xs font-normal text-gray-500">
+                {item.desc}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  

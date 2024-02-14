@@ -1,20 +1,20 @@
-import DataTypes from "./lessen1/dataTypes(basic)"
-import TypeConversion from "./lessen2/typeConversion"
-import VariablesAssignment from "./Lessen3/variablesAssignment"
-import Expressions from "./lessen4/Expressions"
-import Statements from "./lessen5/Statements"
-import Objects from "./lessen6/Objects"
-import Functions from "./lessen7/functions(basic)"
-import ExpressionsAdvance from "./lessen8/expressionsAdvance"
-import VariableScopes from "./lessen9/variableScopes"
-import  FunctionsAdvanced from "./lessen10/functionsAdvanced"
-import OOP from "./lessen11/OOP"
-import ObjectsAdvanced from "./lessen12/ObjectsAdvanced"
-import CleanCode from "./lessen13/cleanCode"
+import DataTypes from "./lesson1/dataTypes(basic)"
+import TypeConversion from "./lesson2/typeConversion"
+import VariablesAssignment from "./Lesson3/variablesAssignment"
+import Expressions from "./lesson4/Expressions"
+import Statements from "./lesson5/Statements"
+import Objects from "./lesson6/Objects"
+import Functions from "./lesson7/functions(basic)"
+import ExpressionsAdvance from "./lesson8/expressionsAdvance"
+import VariableScopes from "./lesson9/variableScopes"
+import  FunctionsAdvanced from "./lesson10/functionsAdvanced"
+import OOP from "./lesson11/OOP"
+import ObjectsAdvanced from "./lesson12/ObjectsAdvanced"
+import CleanCode from "./lesson13/cleanCode"
 
 
 
-  const lessens = [
+  const lessons = [
     {
       title: "Data types in Javascript",
       desc: "Basic introduction to data and data types in Javascript.",
@@ -129,6 +129,6 @@ import CleanCode from "./lessen13/cleanCode"
     { title: "clean code", desc:"", steps:[{title:"destructuring", component:CleanCode}]}
   ];
   
-export default lessens;
+export default lessons;
 
   

@@ -1,4 +1,6 @@
 import DataTypes from "./lesson1/dataTypes(basic)"
+import DataTypesNumber from "./lesson1/dataTypesNumber(basic)"
+import DataTypeBoolean from "./lesson1/dataTypeBoolean"
 import TypeConversion from "./lesson2/typeConversion"
 import VariablesAssignment from "./Lesson3/variablesAssignment"
 import Expressions from "./lesson4/Expressions"
@@ -18,7 +20,11 @@ import CleanCode from "./lesson13/cleanCode"
     {
       title: "Data types in Javascript",
       desc: "Basic introduction to data and data types in Javascript.",
-      steps: [{ title: "Basic types", component: DataTypes }],
+      steps: [
+        { title: "Basic types String", component: DataTypes },
+        { title: "Basic types Number", component: DataTypesNumber },
+        { title: "Basic types Boolian", component: DataTypeBoolean }
+      ],
     },
     {
       title: "Type conversion",

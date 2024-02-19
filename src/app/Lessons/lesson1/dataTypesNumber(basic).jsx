@@ -1,8 +1,8 @@
 import { Tooltip } from "@/app/components/Tooltip";
-export default function DataTypes() {
+export default function DataTypesNumber() {
   return (
     <div className="mt-5 justify-center flex-row text-center">
-       <h1 className="my-3  text-4xl text-orange-600 font-bold">"String"</h1>
+       <h1 className="my-3  text-4xl text-blue-600 font-bold">Number</h1>
       <div className="flex md:flex-col-2 justify-center">
         <div className="w-64 h-28 m-6 rounded-md bg-gray-300 boxLesson items-center flex justify-center">
           {" "}
@@ -15,9 +15,9 @@ export default function DataTypes() {
                 <span className=" text-green-600 text-lg font-medium">   
                   let
                 </span>&nbsp;&nbsp;
-                <span className=" text-purple-700 text-lg font-medium">fristName</span>&nbsp;&nbsp;
+                <span className=" text-purple-700 text-lg font-medium">age</span>&nbsp;&nbsp;
                 <span className="text-lg">=</span>&nbsp;&nbsp;
-                <span className="text-lg text-orange-600 font-medium hover:outline  outline-3 rounded-md outline-gray-500">"John"</span>;
+                <span className="text-lg text-orange-600 font-medium hover:outline  outline-3 rounded-md outline-gray-500">25</span>;
               </div>
             </Tooltip>
           </div>
@@ -32,9 +32,9 @@ export default function DataTypes() {
                 <span className=" text-green-600 text-lg font-medium">   
                   let
                 </span>&nbsp;&nbsp;
-                <span className=" text-purple-700 text-lg font-medium">lastName</span>&nbsp;&nbsp;
+                <span className=" text-purple-700 text-lg font-medium">hight</span>&nbsp;&nbsp;
                 <span className="text-lg">=</span>&nbsp;&nbsp;
-                <span className="text-lg text-orange-600 font-medium hover:outline  outline-3 rounded-md outline-gray-500">"Smith"</span>;
+                <span className="text-lg text-orange-600 font-medium hover:outline  outline-3 rounded-md outline-gray-500">6.1</span>;
               </div>
             </Tooltip>
           </div>
@@ -51,9 +51,9 @@ export default function DataTypes() {
                 <span className=" text-green-600 text-lg font-medium">   
                   let
                 </span>&nbsp;&nbsp;
-                <span className=" text-purple-700 text-lg font-medium">hairColor</span>&nbsp;&nbsp;
+                <span className=" text-purple-700 text-lg font-medium">Score</span>&nbsp;&nbsp;
                 <span className="text-lg">=</span>&nbsp;&nbsp;
-                <span className="text-lg text-orange-600 font-medium hover:outline  outline-3 rounded-md outline-gray-500">"Brown"</span>;
+                <span className="text-lg text-orange-600 font-medium hover:outline  outline-3 rounded-md outline-gray-500">+"22"</span>;
               </div>
             </Tooltip>
           </div>

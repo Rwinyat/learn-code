@@ -31,7 +31,7 @@ export default function NewLesson() {
     <div>
       <Navbar />
       <div>
-        <div className="flex justify-center items-center  shadow-md p-4">
+        <div className="flex justify-center items-center bg-white  shadow-md p-4 sticky top-[80px] z-10">
           {/* Previous button */}
           <button
             type="button"

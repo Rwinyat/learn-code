@@ -1,7 +1,11 @@
 import DataTypes from "./lesson1/dataTypes(basic)"
 import DataTypesNumber from "./lesson1/dataTypesNumber(basic)"
 import DataTypeBoolean from "./lesson1/dataTypeBoolean"
-import TypeConversion from "./lesson2/typeConversion"
+
+import ConversionToString from "./lesson2/ConversionToString"
+import ConversionToNumber from "./lesson2/ConversionToNumber"
+import ConversionToBoolean from "./lesson2/BooleanToNumber"
+
 import VariablesAssignment from "./Lesson3/variablesAssignment"
 import Expressions from "./lesson4/Expressions"
 import Statements from "./lesson5/Statements"
@@ -30,9 +34,10 @@ import CleanCode from "./lesson13/cleanCode"
       title: "Type conversion",
       desc: "JavaScript variables can be converted to a new data type and another variable",
       steps: [
-        { title: "number", component: TypeConversion },
-        { title: "boolean", component: TypeConversion },
-        { title: "string", component: TypeConversion },
+        { title: "number", component: ConversionToNumber },
+        
+        { title: "string", component: ConversionToString },
+        { title: "boolean", component: ConversionToBoolean }
       ],
     },
     {

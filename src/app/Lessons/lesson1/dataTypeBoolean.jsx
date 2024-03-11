@@ -1,6 +1,5 @@
 import { Tooltip } from "@/app/components/Tooltip";
-import Image from "next/image";
-import ArrowIcon from "../../icon/Custom-Icon-Design-Flat-Cute-Arrows-Button-Arrow-Right.512.png";
+
 export default function DataTypeBoolean() {
   return (
     <div className="mt-10 justify-center flex-row text-center">

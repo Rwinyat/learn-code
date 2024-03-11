@@ -1,12 +1,15 @@
+// Lesson1
 import DataTypes from "./lesson1/dataTypes(basic)"
 import DataTypesNumber from "./lesson1/dataTypesNumber(basic)"
 import DataTypeBoolean from "./lesson1/dataTypeBoolean"
-
+// lesson2
 import ConversionToString from "./lesson2/ConversionToString"
 import ConversionToNumber from "./lesson2/ConversionToNumber"
 import ConversionToBoolean from "./lesson2/BooleanToNumber"
-
+//lesson3
 import VariablesAssignment from "./Lesson3/variablesAssignment"
+
+
 import Expressions from "./lesson4/Expressions"
 import Statements from "./lesson5/Statements"
 import Objects from "./lesson6/Objects"

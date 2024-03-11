@@ -254,5 +254,16 @@ h4{
   border-right: 20px solid #555555;
   border-left: 0;
 }
+.jsCode {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 91% 75%, 83% 86%, 81% 75%, 0% 75%);
 
+
+}
+.memoryBrowser{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 15% 75%, 13% 85%, 7% 75%, 0% 75%);
+
+
+
+
+}
 

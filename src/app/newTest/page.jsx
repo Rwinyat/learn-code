@@ -217,66 +217,123 @@
 // }
 // 
 "use client"
-import React, { useState, useEffect } from "react";
-import "../globals.css";
-import lessons from "../Lessons/content";
+// import React, { useState, useEffect } from "react";
+// import "../globals.css";
+// import lessons from "../Lessons/content";
 
-export default function Stepper() {
-  const [currentItem, setCurrentItem] = useState("0");
+// export default function Stepper() {
+//   const [currentItem, setCurrentItem] = useState("0");
 
-  useEffect(() => {
-    const storedItem = localStorage.getItem("currentItem");
-    if (storedItem) {
-      setCurrentItem(storedItem);
-    }
-  }, []);
+//   useEffect(() => {
+//     const storedItem = localStorage.getItem("currentItem");
+//     if (storedItem) {
+//       setCurrentItem(storedItem);
+//     }
+//   }, []);
 
-  const handleClick = (index) => {
-    setCurrentItem(index.toString());
-    localStorage.setItem("currentItem", index.toString());
+//   const handleClick = (index) => {
+//     setCurrentItem(index.toString());
+//     localStorage.setItem("currentItem", index.toString());
+//   };
+
+//   return (
+//     <div className="flex flex-col">
+//       {lessons.map((item, index) => (
+//         <div className="flex items-center mb-4" key={index}>
+//           <div className="flex flex-col items-center">
+//             <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+//               {currentItem === index.toString() ? (
+//                 <a href="">
+//                   <svg
+//                     className="w-4 h-4 text-white"
+//                     xmlns="http://www.w3.org/2000/svg"
+//                     viewBox="0 0 20 20"
+//                     fill="currentColor"
+//                   >
+//                     <path
+//                       fillRule="evenodd"
+//                       d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z"
+//                       clipRule="evenodd"
+//                     />
+//                   </svg>
+//                 </a>
+//               ) : (
+//                 <div className="w-2.5 h-2.5 bg-white rounded-full">
+//                   <a href="" onClick={() => handleClick(index)}></a>
+//                 </div>
+//               )}
+//             </div>
+
+//             {index < lessons.length - 1 && (
+//               <div className="w-0.5 h-8 bg-gray-300" />
+//             )}
+//           </div>
+//           <div className="ml-4 text-sm font-medium text-gray-700">
+//             {item.title}
+//             <br />
+//             <span className="text-xs font-normal text-gray-500">
+//               {item.desc}
+//             </span>
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+import React from "react";
+
+const TreeNode = ({ label, children }) => {
+  return (
+    <div className="flex items-center">
+      <div className="h-full bg-gray-300 w-2"></div>
+      <div className="ml-2">
+        <div className="flex items-center">
+          <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+            <span className="text-white">{label}</span>
+          </div>
+          {children && (
+            <ul className="list-disc pl-4">
+              {children.map((child, index) => (
+                <li key={index}>
+                  <TreeNode label={child.label} children={child.children} />
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const TreeDiagram = () => {
+  const treeData = {
+    label: "Data Type",
+    children: [
+      {
+        label: "Primitive Type",
+        children: [
+          { label: "Number" },
+          { label: "String" },
+          { label: "Boolean" },
+        ],
+      },
+      {
+        label: "Non-Primitive Type",
+        children: [
+          { label: "Object" },
+          { label: "Array" },
+          { label: "Function" },
+        ],
+      },
+    ],
   };
 
   return (
-    <div className="flex flex-col">
-      {lessons.map((item, index) => (
-        <div className="flex items-center mb-4" key={index}>
-          <div className="flex flex-col items-center">
-            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-              {currentItem === index.toString() ? (
-                <a href="">
-                  <svg
-                    className="w-4 h-4 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-              ) : (
-                <div className="w-2.5 h-2.5 bg-white rounded-full">
-                  <a href="" onClick={() => handleClick(index)}></a>
-                </div>
-              )}
-            </div>
-
-            {index < lessons.length - 1 && (
-              <div className="w-0.5 h-8 bg-gray-300" />
-            )}
-          </div>
-          <div className="ml-4 text-sm font-medium text-gray-700">
-            {item.title}
-            <br />
-            <span className="text-xs font-normal text-gray-500">
-              {item.desc}
-            </span>
-          </div>
-        </div>
-      ))}
+    <div>
+      <TreeNode label={treeData.label} children={treeData.children} />
     </div>
   );
-}
+};
+
+export default TreeDiagram;

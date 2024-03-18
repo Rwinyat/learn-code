@@ -26,7 +26,7 @@ export default function Browser() {
       </div>
 
       <div className="browserBody">
-        <p>salam coetr</p>
+        <p>salam </p>
       </div>
     </div>
   );

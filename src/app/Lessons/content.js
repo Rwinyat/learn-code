@@ -2,6 +2,7 @@
 import DataTypes from "./lesson1/dataTypes(basic)"
 import DataTypesNumber from "./lesson1/dataTypesNumber(basic)"
 import DataTypeBoolean from "./lesson1/dataTypeBoolean"
+import TreeDiagram from "./lesson2/TreeDiagram"
 // lesson2
 import ConversionToString from "./lesson2/ConversionToString"
 import ConversionToNumber from "./lesson2/ConversionToNumber"
@@ -37,10 +38,20 @@ import CleanCode from "./lesson13/cleanCode"
       title: "Type conversion",
       desc: "JavaScript variables can be converted to a new data type and another variable",
       steps: [
+
+        {title:"TreeDiagram",component:TreeDiagram}
+      ],
+    },
+    {
+      title: "Type conversion",
+      desc: "JavaScript variables can be converted to a new data type and another variable",
+      steps: [
+   
         { title: "number", component: ConversionToNumber },
         
         { title: "string", component: ConversionToString },
-        { title: "boolean", component: ConversionToBoolean }
+        { title: "boolean", component: ConversionToBoolean },
+    
       ],
     },
     {

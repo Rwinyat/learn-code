@@ -164,9 +164,7 @@
 // export default function Stepper() {
 //   const [currentId, newCurrentId] = useState();
 
- 
 //   const currentItem = localStorage.getItem("currentItem");
-
 
 //   const handleClick = (index) => {
 //     newCurrentId(index);
@@ -215,8 +213,8 @@
 //     </div>
 //   );
 // }
-// 
-"use client"
+//
+"use client";
 // import React, { useState, useEffect } from "react";
 // import "../globals.css";
 // import lessons from "../Lessons/content";
@@ -280,60 +278,133 @@
 //     </div>
 //   );
 // }
-import React from "react";
+// import React from "react";
 
-const TreeNode = ({ label, children }) => {
+// const TreeNode = ({ label, children }) => {
+//   return (
+//     <div className="flex items-center">
+//       <div className="h-full bg-gray-300 w-2"></div>
+//       <div className="ml-2">
+//         <div className="flex items-center">
+//           <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+//             <span className="text-white">{label}</span>
+//           </div>
+//           {children && (
+//             <ul className="list-disc pl-4">
+//               {children.map((child, index) => (
+//                 <li key={index}>
+//                   <TreeNode label={child.label} children={child.children} />
+//                 </li>
+//               ))}
+//             </ul>
+//           )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// const TreeDiagram = () => {
+//   const treeData = {
+//     label: "Data Type",
+//     children: [
+//       {
+//         label: "Primitive Type",
+//         children: [
+//           { label: "Number" },
+//           { label: "String" },
+//           { label: "Boolean" },
+//         ],
+//       },
+//       {
+//         label: "Non-Primitive Type",
+//         children: [
+//           { label: "Object" },
+//           { label: "Array" },
+//           { label: "Function" },
+//         ],
+//       },
+//     ],
+//   };
+
+//   return (
+//     <div>
+//       <TreeNode label={treeData.label} children={treeData.children} />
+//     </div>
+//   );
+// };
+
+// export default TreeDiagram;
+import "./style.css";
+
+export default function TreeDiagram() {
   return (
-    <div className="flex items-center">
-      <div className="h-full bg-gray-300 w-2"></div>
-      <div className="ml-2">
-        <div className="flex items-center">
-          <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-            <span className="text-white">{label}</span>
-          </div>
-          {children && (
-            <ul className="list-disc pl-4">
-              {children.map((child, index) => (
-                <li key={index}>
-                  <TreeNode label={child.label} children={child.children} />
+    // <div>
+    //   <ul>
+    //     <li>
+    //       <a className="arvin">Data Type</a>
+
+    //       <ul>
+    //         <li>
+
+    //           <p>Primitive Type</p>
+    //           <ul>
+    //             <li>Number</li>
+    //             <li>String</li>
+    //             <li>Boolean</li>
+    //           </ul>
+    //         </li>
+    //         <li>
+
+    //           <p>Non Primitive Type</p>
+    //           <ul>
+    //             <li>Object</li>
+    //             <li>Array</li>
+    //             <li>Function</li>
+    //           </ul>
+    //         </li>
+    //       </ul>
+    //     </li>
+    //   </ul>
+    // </div>
+    <div class="tree">
+      <ul>
+        <li>
+          <a href="#">Data Type</a>
+          <ul>
+            <li>
+              <a href="#">Primitive Type</a>
+              <ul>
+                <li>
+                  <a href="#">String</a>
                 </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </div>
+                <li>
+                  <a href="#">Number</a>
+                </li>
+                <li>
+                  <a href="#">Boolean</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Non Primitive Type</a>
+              <ul>
+              
+                <li>
+                  <a href="#">Object</a>
+                </li>
+                <li>
+                  <a href="#">Array</a>
+                </li>
+                <li>
+                  <a href="#">Function</a>
+                </li>
+              </ul>
+            
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   );
-};
-
-const TreeDiagram = () => {
-  const treeData = {
-    label: "Data Type",
-    children: [
-      {
-        label: "Primitive Type",
-        children: [
-          { label: "Number" },
-          { label: "String" },
-          { label: "Boolean" },
-        ],
-      },
-      {
-        label: "Non-Primitive Type",
-        children: [
-          { label: "Object" },
-          { label: "Array" },
-          { label: "Function" },
-        ],
-      },
-    ],
-  };
-
-  return (
-    <div>
-      <TreeNode label={treeData.label} children={treeData.children} />
-    </div>
-  );
-};
-
-export default TreeDiagram;
+}

@@ -7,8 +7,8 @@ import NewDastan from "../../components/newcomponent"
 
 export default function VariablesAssignment(){
     return(
-        <div className="my-11 ">
-            <div className="flex justify-evenly my-5">
+        <div className="mt-11 ">
+            <div className="flex justify-evenly mt-5">
        
             <JsCode />
             <BrowserMemory />

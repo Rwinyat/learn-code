@@ -10,7 +10,7 @@ export default function JsCode() {
         <Image src={RuntimeCode} width={20}/>
         <h1 className=" text-lg font-bold pl-2">Javascript Code running in Browser</h1>
       </div>
-      <div className="ml-6"><p className="text-md font-bold">let myVar= 23</p></div>
+      <div className="ml-6"><p className="text-md font-bold">let myVar= 23</p> <input type="text" /></div>
     </div>
   );
 }
